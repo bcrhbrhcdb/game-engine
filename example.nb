@@ -1,0 +1,33 @@
+// This is an example Nooby file
+
+page "My First Nooby Page"
+
+style {
+  body: background-color #f0f0f0, font-family Arial, sans-serif
+  h1: color #0066cc, font-size 24px
+  p: color #333333, font-size 16px
+}
+
+h1 "Welcome to Nooby!"
+p "This is a paragraph written in Nooby."
+
+var x = 10
+var y = 20
+
+print "The sum is: " + (x + y)
+
+if (x > y) {
+  print "x is greater than y"
+} else {
+  print "y is greater than or equal to x"
+}
+
+repeat 3 {
+  print "Nooby is awesome!"
+}
+
+func greet(name) {
+  print "Hello, " + name + "!"
+}
+
+greet("Nooby User")

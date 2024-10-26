@@ -1,8 +1,9 @@
 {
+  "name": "nooby-language",
+  "version": "1.0.0",
+  "description": "Nooby programming language compiler",
+  "main": "nooby.js",
   "scripts": {
-    "start": "servor --reload"
-  },
-  "dependencies": {
-    "servor": "^4.0.2"
+    "compile": "node nooby.js"
   }
 }
