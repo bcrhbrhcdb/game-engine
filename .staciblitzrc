@@ -1,0 +1,7 @@
+{
+  "installDependencies": true,
+  "startCommand": "npm start",
+  "env": {
+    "NOOBY_ICON": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyABP1Kckb1jYQ_XGjZbJUM5hMv6_VY6cLVnuiot0kLR0F1ca-MQVKVeCBZGVo3JqrY14&usqp=CAU"
+  }
+}

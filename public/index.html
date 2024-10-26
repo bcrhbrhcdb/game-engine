@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nooby Preview</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    #output, #variables {
+      white-space: pre-wrap;
+      font-family: monospace;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nooby Preview</h1>
+  <h2>Output:</h2>
+  <div id="output"></div>
+  <h2>Variables:</h2>
+  <div id="variables"></div>
+  <script>
+    function updatePreview() {
+      fetch('/run/example.nb')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('output').textContent = JSON.stringify(data.result, null, 2);
+          document.getElementById('variables').textContent = JSON.stringify(data.variables, null, 2);
+        })
+        .catch(error => {
+          document.getElementById('output').textContent = `Error: ${error.message}`;
+        });
+    }
+
+    // Update preview every 5 seconds
+    setInterval(updatePreview, 5000);
+    updatePreview(); // Initial update
+  </script>
+</body>
+</html>

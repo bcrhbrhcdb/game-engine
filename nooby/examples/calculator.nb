@@ -1,0 +1,25 @@
+import math
+import io
+
+func add(a, b) {
+  return math.add(a, b)
+}
+
+func subtract(a, b) {
+  return math.subtract(a, b)
+}
+
+func main() {
+  io.print("Simple Calculator")
+  
+  num1 = io.readNumber("Enter first number: ")
+  num2 = io.readNumber("Enter second number: ")
+
+  sum = add(num1, num2)
+  difference = subtract(num1, num2)
+
+  io.print("Sum: " + math.toString(sum))
+  io.print("Difference: " + math.toString(difference))
+}
+
+main()

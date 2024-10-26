@@ -1,9 +1,16 @@
 {
   "name": "nooby-language",
   "version": "1.0.0",
-  "description": "Nooby programming language compiler",
-  "main": "nooby.js",
+  "description": "Nooby programming language",
+  "main": "server.js",
   "scripts": {
-    "compile": "node nooby.js"
+    "start": "node server.js"
+  },
+  "keywords": ["nooby", "programming-language"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "chokidar": "^3.5.2"
   }
 }

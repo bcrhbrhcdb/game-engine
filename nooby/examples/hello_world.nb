@@ -1,0 +1,7 @@
+import io
+
+func main() {
+  io.print("Hello, World!")
+}
+
+main()
