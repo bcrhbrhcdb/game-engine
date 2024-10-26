@@ -1,1 +1,6 @@
+# Specify Nooby language for .nb files
 *.nb linguist-language=Nooby
+
+# Ignore JavaScript and HTML for language stats
+*.js linguist-detectable=false
+*.html linguist-detectable=false
