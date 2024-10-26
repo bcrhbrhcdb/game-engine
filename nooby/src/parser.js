@@ -71,13 +71,6 @@ function parse(tokens) {
         return node;
       }
 
-      if (token.value === 'return') {
-        let node = new ASTNode('ReturnStatement', null);
-        current++;
-        node.children = [walk()];
-        return node;
-      }
-
       // Add more keyword handling here (if, while, for, etc.)
     }
 

@@ -1,7 +1,6 @@
 const stdlib = {
     math: require('./stdlib/math'),
     io: require('./stdlib/io'),
-    string: require('./stdlib/string')
   };
   
   class NoobyRuntime {
@@ -10,12 +9,10 @@ const stdlib = {
     }
   
     execute(compiledCode) {
-      const executionContext = {
-        ...this.globalScope,
-        console: console // Allow using console.log for debugging
-      };
-  
+      const executionContext = { ...this.globalScope };
+      
       const executeFunction = new Function(...Object.keys(executionContext), compiledCode);
+      
       return executeFunction(...Object.values(executionContext));
     }
   }

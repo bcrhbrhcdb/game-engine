@@ -1,0 +1,7 @@
+// This is an example Nooby file
+
+func main() {
+   io.print("Hello from Nooby!");
+}
+
+main();

@@ -4,7 +4,8 @@ const { tokenize } = require('./lexer');
 function compile(sourceCode) {
   const tokens = tokenize(sourceCode);
   const ast = parse(tokens);
-  return generateCode(ast);
+  const jsCode = generateCode(ast);
+  return { jsCode };
 }
 
 function generateCode(node) {
@@ -13,15 +14,13 @@ function generateCode(node) {
       return node.children.map(generateCode).join('\n');
 
     case 'FunctionDeclaration':
-      return `function ${node.value}(${node.children.slice(0, -1).map(generateCode).join(', ')}) {
-        ${generateCode(node.children[node.children.length - 1])}
-      }`;
+      return `function ${node.value}(${node.children.map(generateCode).join(', ')}) {\n${generateCode(node.body)}\n}`;
 
     case 'BlockStatement':
       return node.children.map(generateCode).join('\n');
 
     case 'ReturnStatement':
-      return `return ${generateCode(node.children[0])};`;
+      return `return ${generateCode(node.argument)};`;
 
     case 'Identifier':
       return node.value;
