@@ -4,7 +4,9 @@ const { tokenize } = require('./lexer');
 function compile(sourceCode) {
   const tokens = tokenize(sourceCode);
   const ast = parse(tokens);
+  
   const jsCode = generateCode(ast);
+  
   return { jsCode };
 }
 

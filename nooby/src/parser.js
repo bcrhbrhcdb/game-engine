@@ -70,7 +70,7 @@ function parse(tokens) {
 
         return node;
       }
-
+      
       // Add more keyword handling here (if, while, for, etc.)
     }
 
@@ -85,6 +85,7 @@ function parse(tokens) {
       ) {
         node.children.push(walk());
       }
+      
       current++;
 
       return node;
@@ -94,6 +95,7 @@ function parse(tokens) {
   }
 
   let ast = new ASTNode('Program', null, []);
+  
   while (current < tokens.length) {
     ast.children.push(walk());
   }

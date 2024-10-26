@@ -1,16 +1,31 @@
 {
   "name": "nooby-lang",
   "version": "1.0.0",
-  "description": "Nooby programming language",
+  "description": "A simple programming language called Nooby.",
   "main": "nooby.js",
+  "bin": {
+    "nooby": "./nooby.js"
+  },
   "scripts": {
     "start": "node nooby.js",
     "build": "node build.js"
   },
-  "keywords": ["nooby", "programming-language"],
-  "author": "Alex",
+  "keywords": [
+    "nooby",
+    "programming-language"
+  ],
+  "author": "Alex", 
   "license": "MIT",
   "dependencies": {
     "commander": "^8.3.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcrhbrhcdb/game-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bcrhbrhcdb/game-engine/issues"
+  },
+  "homepage": "https://github.com/bcrhbrhcdb/game-engine#readme"
 }
